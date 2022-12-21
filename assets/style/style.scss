@@ -1,0 +1,134 @@
+/*
+  Variables
+*/
+$link-active: hsl(220, 98%, 61%);
+$check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+// Light theme colors
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+// Box Shadows
+.shadow {
+  -webkit-box-shadow: 0px 0px 2px 0px #000000;
+  box-shadow: 0px 0px 2px 0px #000000;
+}
+
+/*
+  Header Styles
+*/
+body {
+  background: url('../images/bg-mobile-light.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2.4rem 1.4rem;
+
+  &__title {
+    letter-spacing: 0.7rem;
+    color: #fff;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    width: 80%;
+
+    &__items {
+      display: flex;
+      width: 90%;
+    }
+
+    &__todo {
+      outline: none;
+      border: none;
+      width: 100%;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.items-circle {
+  border: 1px solid #ddd;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 25px;
+  height: 22.5px;
+  margin-right: 1rem;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 0.4rem;
+  margin: 1rem auto;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  width: 100%;
+
+  &__container {
+    display: flex;
+
+    &__checked {}
+
+    &__item {
+      font-size: 1rem;
+    }
+
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}

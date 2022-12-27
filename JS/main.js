@@ -8,7 +8,7 @@ const form = document.getElementById('form');
 
 const inputDescription = document.getElementById('todo-item');
 
-const itemsContainer = document.getElementById('todo-items');
+const itemsContainer = document.getElementById('todo-cont');
 
 //consturctor en clase
 class ToDoItem {
@@ -29,8 +29,8 @@ main.addEventListener('keypress', (e) => {
  const description = inputDescription.value;
 
  //mandar los valores
- if(e.key === 'Enter') {
-  const item = new ToDoItem(false, description, 0);
+ if(e.key === 'Enter'&& description != '') {
+  const item = new ToDoItem(false, description);
 
   //agregar un nuewvo toodo
   Items.addItem(item);
@@ -41,4 +41,13 @@ main.addEventListener('keypress', (e) => {
  }
 
 
+});
+
+itemsContainer.addEventListener('click', (e) => {
+console.log(e.target);
+  //remover elemento
+  if(e.target.classList.contains('remove')){
+    Items.removeItem(e.target);
+  }
+  
 });

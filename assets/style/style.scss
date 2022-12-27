@@ -1,6 +1,8 @@
 /*
   Variables
 */
+
+
 $link-active: hsl(220, 98%, 61%);
 $check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
@@ -27,6 +29,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-color: #f6f6f8;
 }
 
 .header {
@@ -37,23 +40,28 @@ body {
 
   &__title {
     letter-spacing: 0.7rem;
-    color: #fff;
+    color: hsl(0deg, 0%, 98%);
   }
+}
+
+::placeholder {
+  font-size: 1rem;
 }
 
 .form {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 90%;
+  background-color: hsl(0deg, 0%, 98%);
+  border-radius: 0.4rem;
+  margin: 0 auto;
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     padding: 0.75rem 1rem;
-    border-radius: 0.4rem;
-    width: 80%;
+    width: 100%;
 
     &__items {
       display: flex;
@@ -87,9 +95,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
-  border-radius: 0.4rem;
+  width: 90%;
   margin: 1rem auto;
+  background-color: hsl(0deg, 0%, 98%);
+  border-radius: 0.4rem;
 
   &__container {
     display: flex;
@@ -104,25 +113,52 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 1rem 0;
+    color: $filters;
+
+    &__lefts {
+      margin-left: 1rem;
+    }
+
+    &__clear {
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+
+    &__clear:hover {
+      
+    }
+
+    &__clear:hover {
+
+    }
   }
 }
 
-
+/*
+  estilos individuales to do
+*/
 .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 0.75rem 1rem;
+  padding: 1.45rem 0;
   width: 100%;
+  border-bottom: 1px solid #ddd;
 
   &__container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
 
-    &__checked {}
+    &__checked {
+      cursor: pointer;
+    }
 
     &__item {
       font-size: 1rem;
+      color: $todo-text;
     }
 
   }
@@ -130,5 +166,50 @@ body {
   button {
     border: none;
     background-color: transparent;
+    margin-right: 1rem;
+    cursor: pointer;
   }
 }
+
+.completed {
+  background: $check-bg;
+  background-image: url('../images/icon-check.svg');
+}
+
+/*
+  Filter Box
+*/
+.filterbox {
+  display: flex;
+  justify-content: center;
+  background-color: $light;
+  width: 90%;
+  margin: 1.5rem auto;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+
+  p {
+    font-weight: 700;
+    color: $filters;
+    cursor: pointer;
+  }
+
+  p.active {
+    color: $link-active;
+  }
+
+  > *:not(:last-child) {
+    margin-right: 1.85rem;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: $filters;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 3.75rem;
+}
+
+

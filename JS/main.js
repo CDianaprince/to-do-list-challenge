@@ -1,6 +1,6 @@
 // Imports de nuestro modulos
 import Items from "./modules/add-remove.js";
-/*import ToDoItem from "./modules/item-constructor.js";*/
+import ToDoItem from "./modules/item-constructor.js";
 
 // Constantes iniciales
 const main = document.getElementById('main');
@@ -10,20 +10,14 @@ const inputDescription = document.getElementById('todo-item');
 
 const itemsContainer = document.getElementById('todo-cont');
 
-//consturctor en clase
-class ToDoItem {
-  constructor(completed, description, index){
-    this.completed = completed;
-    this.description = description;
-    this.index = index;
-  }
-}
 
 
+//Evento de escucha de la forma
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
+//Evento de escucha main para ingresar elemntos
 main.addEventListener('keypress', (e) => {
  //obtener valore
  const description = inputDescription.value;
@@ -43,6 +37,8 @@ main.addEventListener('keypress', (e) => {
 
 });
 
+
+//evento de escuha para remover
 itemsContainer.addEventListener('click', (e) => {
 console.log(e.target);
   //remover elemento

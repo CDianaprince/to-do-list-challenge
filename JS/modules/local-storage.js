@@ -22,7 +22,16 @@ static addItem(item) {
 
 }
 
-static removeItem() {
+static removeItem(content) {
+  const items = LocalStorage.getItem();
+
+  items.forEach((item, index) => {
+    
+    if(item.description === content) {
+      items.splice(index, 1)
+    }
+  });
+  localStorage.setItem('items', JSON.stringify(items));
 
 }
 }

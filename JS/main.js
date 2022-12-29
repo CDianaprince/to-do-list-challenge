@@ -51,6 +51,9 @@ console.log(e.target);
   //remover elemento
   if(e.target.classList.contains('remove')){
     Items.removeItem(e.target);
+
+
+    LocalStorage.removeItem( e.target.parentElement.previousElementSibling.lastElementChild.textContent, );
   }
   
 });
